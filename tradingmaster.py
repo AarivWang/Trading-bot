@@ -50,8 +50,8 @@ import requests
 getcontext().prec = 28
 
 BASE_URL = "https://mock-api.roostoo.com"
-API_KEY = os.getenv("ROOSTOO_API_KEY", "USEAPIKEYASMYID")
-SECRET_KEY = os.getenv("ROOSTOO_SECRET_KEY", "S1XP1e3UZj6A7H5fATj0jNhqPxxdSJYdInClVN65XAbvqqMKjVHjA7PZj4W12oep")
+API_KEY = os.getenv("ROOSTOO_API_KEY", "ttdLE0ZRfWAZeaBoaq8SyEhH6QSQ8yr6laZzTgKNTTYTkogK1cUWdT9P6r59Jd3S")
+SECRET_KEY = os.getenv("ROOSTOO_SECRET_KEY", "8mYHLPiVxrTDx8bTe5UUumVOmZ07DBAE1ZovuxgyJk7ny1oYrDECdWc1GbuMX1fN")
 
 STATE_FILE = "omega_state.json"
 TRADES_LOG = "omega_trades.csv"
