@@ -44,8 +44,8 @@ import requests
 getcontext().prec = 28
 
 BASE_URL = "https://mock-api.roostoo.com"
-API_KEY = os.getenv("ROOSTOO_API_KEY", "ttdLE0ZRfWAZeaBoaq8SyEhH6QSQ8yr6laZzTgKNTTYTkogK1cUWdT9P6r59Jd3S")
-SECRET_KEY = os.getenv("ROOSTOO_SECRET_KEY", "8mYHLPiVxrTDx8bTe5UUumVOmZ07DBAE1ZovuxgyJk7ny1oYrDECdWc1GbuMX1fN")
+API_KEY = os.getenv("ROOSTOO_API_KEY", " yN6cF2VtW9xJ4qPbeK1mZ7YruA3dH0GiP5oL8wQnrR2tC6XfD8vB1kMeZ4gU7SaJ")
+SECRET_KEY = os.getenv("ROOSTOO_SECRET_KEY", "tG5yH7uJ9iK1oL3pA6sD8fF0gH2jK4lZ7xC9vB1nM3qW5eR7tY9uI1oP3aS5")
 
 FEE_RATE = Decimal("0.001")  # 0.1% 每笔
 ROUND_TRIP_FEE = FEE_RATE * Decimal("2.0")
