@@ -2,20 +2,21 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Roostoo OMEGA-SPOT Rotation — 低频、现货、费用感知 的多资产轮动机器人
-===================================================================
-遵循规则：
-  • 仅现货（spot），仅 USD 基准：买=USD→币，卖=币→USD；不做空、不保证金/杠杆；不做做市/套利。
-  • 交易费：0.1%/笔（买+卖回合计 ~0.2%），策略在开仓/平仓判断中显式纳入费用缓冲。
-  • 频率限制：避免高频；默认每分钟最多 2 笔，下单后同一标的冷却期≥120s，持仓最短持有≥300s。
-  • 撮合：仅交易 */USD 交易对；不进行“币→币”直换，轮动时先卖出旧持仓为 USD，再买入新标的。
+Roostoo OMEGA-SPOT Rotation — Low-Frequency, Spot, Fee-Aware Multi-Asset Rotation Robot
 
-策略核心（非单纯趋势）：
-  • Cross-sectional Rotation：多资产相对强度轮动（过去 M 分钟 ROC + 斜率 + 突破 + 24h 强度）
-  • 波动缩放仓位 + 费用阈值（edge 必须 > 费用+冗余）
-  • 三重退出（止损/止盈/追踪） + 排名跌出 + 最短持有检查
-  • 组合级风控（最大回撤 Kill Switch）
-  • 状态持久化（断线续跑）
+= ... • Matching: Only trades */USD trading pairs; no direct "coin-to-coin" swaps. During rotation, old positions are sold for USD first, then the new asset is bought.
+
+Core Strategy (Not Simply Trend):
+
+• Cross-sectional Rotation: Rotation of multiple assets based on relative strength (past M-minute ROC + slope + breakout + 24-hour strength)
+
+• Volatility scaling position sizing + fee threshold (edge ​​must > fee + redundancy)
+
+• Triple exit (stop-loss/take-profit/trading) + ranking drop + minimum hold check
+
+• Portfolio-level risk control (maximum drawdown kill switch)
+
+• State persistence (resuming operation after disconnection)
 
 使用：
   pip install requests
