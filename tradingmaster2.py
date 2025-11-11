@@ -19,8 +19,8 @@ Roostoo OMEGA-SPOT Rotation — 低频、现货、费用感知 的多资产轮�
 
 使用：
   pip install requests
-  export ROOSTOO_API_KEY="你的API_KEY"
-  export ROOSTOO_SECRET_KEY="你的SECRET_KEY"
+  export ROOSTOO_API_KEY="yN6cF2VtW9xJ4qPbeK1mZ7YruA3dH0GiP5oL8wQnrR2tC6XfD8vB1kMeZ4gU7SaJ"
+  export ROOSTOO_SECRET_KEY="tG5yH7uJ9iK1oL3pA6sD8fF0gH2jK4lZ7xC9vB1nM3qW5eR7tY9uI1oP3aS5"
 
   python roostoo_omega_spot.py --interval 10 --universe-size 30 --topk 5 \
     --risk-per-trade 0.02 --budget-perc 0.8 --per-asset-cap 0.25 \
@@ -44,8 +44,8 @@ import requests
 getcontext().prec = 28
 
 BASE_URL = "https://mock-api.roostoo.com"
-API_KEY = os.getenv("ROOSTOO_API_KEY", "8mYHLPiVxrTDx8bTe5UUumVOmZ07DBAE1ZovuxgyJk7ny1oYrDECdWc1GbuMX1fN")
-SECRET_KEY = os.getenv("ROOSTOO_SECRET_KEY", "ttdLE0ZRfWAZeaBoaq8SyEhH6QSQ8yr6laZzTgKNTTYTkogK1cUWdT9P6r59Jd3S")
+API_KEY = os.getenv("ROOSTOO_API_KEY", "yN6cF2VtW9xJ4qPbeK1mZ7YruA3dH0GiP5oL8wQnrR2tC6XfD8vB1kMeZ4gU7SaJ")
+SECRET_KEY = os.getenv("ROOSTOO_SECRET_KEY", "tG5yH7uJ9iK1oL3pA6sD8fF0gH2jK4lZ7xC9vB1nM3qW5eR7tY9uI1oP3aS5")
 
 FEE_RATE = Decimal("0.001")  # 0.1% 每笔
 ROUND_TRIP_FEE = FEE_RATE * Decimal("2.0")
